@@ -2,7 +2,9 @@
 
 Meta's new prompt-based AI model allows zero-shot generalization for any segmentation tasks without the need for additional training. 
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/cf9c238ae7e0726e0cb383e844e2919f86d8f865e8dd8953.gif)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/501a97d189380e5a5ffbb3b7f9cd6d45c84ffffb8abe4c22.gif)
+<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/cf9c238ae7e0726e0cb383e844e2919f86d8f865e8dd8953.gif)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/501a97d189380e5a5ffbb3b7f9cd6d45c84ffffb8abe4c22.gif) -->
+<img src="Data\section-1.1a.gif" width="300" height="300" >
+<img src="Data\section-1.1b.gif" width="300" height="300" >
 
 ## 1\. Overview
 
@@ -25,7 +27,11 @@ Foundation models like SAM learn a general notion of what objects are,such that 
 
 On careful assessment, it is realized that SAM has a very effective zero-shot performance – at-par with or even superior to earlier completely supervised models \[1\].
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1caac742339adb912f7333c1a00b1c7247a9256c3799d983.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/4ba8ee2bc3b6c5c762cc0bc0c8634d7a2c54491fbafec1c3.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/2922e4c4b075ee3501d4647f36d09ecaca2bb08fd645d882.gif)
+<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1caac742339adb912f7333c1a00b1c7247a9256c3799d983.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/4ba8ee2bc3b6c5c762cc0bc0c8634d7a2c54491fbafec1c3.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/2922e4c4b075ee3501d4647f36d09ecaca2bb08fd645d882.gif) -->
+
+<img src="Data\section-1.4a.gif" width="32%" height="300" >
+<img src="Data\section-1.4b.gif" width="32%" height="300" >
+<img src="Data\section-1.4c.gif" width="32%" height="300" >
 
 ### 2.2 SAM as a Promptable Image Segmentation Model
 
@@ -40,7 +46,10 @@ SAM can take prompts from users about which area to segment out precisely. The f
 
 Since the text prompt for SAM has not been released by meta, to read more about image segmentation with text prompt using SAM and Grounding Dino, you can refer to my article [here](https://onlinemarkdowneditor.dev/collaboration/#doce8829bf55f).
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/c326c38f4a03439b649f3f46bf27f83ee63fb10ea73604d8.jpeg)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/24ad53641c1497c6c47756495676943aa880e22d7da75929.gif)
+<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/c326c38f4a03439b649f3f46bf27f83ee63fb10ea73604d8.jpeg)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/24ad53641c1497c6c47756495676943aa880e22d7da75929.gif) -->
+
+<img src="Data\section-1.2a.jpg" width="300" height="300" >
+<img src="Data\section-1.2b.gif" width="300" height="300" >
 
 ### 2.3 Model Architecture 
 
@@ -78,7 +87,12 @@ Meta developed a data engine to collect a dataset, **SA-1B** of 1.1 billion segm
 
 To enhance SAM's capabilities, researchers employed a model-in-the-loop data engine, using SAM to interactively annotate images and update the model. This iterative process of using SAM for annotation and training improved both the model and the dataset.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1a4e2948e35035bd5b41ed871a11f922760fa5ce9cf44a13.gif)
+<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1a4e2948e35035bd5b41ed871a11f922760fa5ce9cf44a13.gif) -->
+
+
+<p align="center">
+  <img src="Data\section-4a.gif" width="300" height="300" >
+</p>
 
 
 The data engine has three stages:
@@ -87,17 +101,6 @@ The data engine has three stages:
 * Semi-Automatic Stage
 * Fully Automatic Stage
 
-**4.1 Assisted-Manual Stage**
-
-In the first stage, the annotators used a pre-trained SAM model to interactively segment objects in images in the browser. The image embeddings were precomputed to make the annotation process seamless and real-time. After the first stage, the dataset consisted of 4.3 million masks from 120k images. The Segment Anything Model was retrained on this dataset.
-
-**4.2 Semi-Automatic Stage**
-
-In the second semi-automatic stage, the prominent objects were already segmented using SAM. The annotators additionally annotated less prominent objects which were unannotated. This stage resulted in an additional 5.9M masks in 180k images on which SAM was retrained.
-
-**4.3 Fully-Automatic Stage**
-
-In the final ‘fully automatic stage’, the annotation was entirely done by SAM, By this stage, it had already been trained on more than 10M masks which made it possible. Automatic mask generation was applied on 11M images resulting in 1.1B masks.
 
 ## 5\. Evaluation Metric and Quantitative Results of SAM
 
@@ -108,6 +111,7 @@ In the final ‘fully automatic stage’, the annotation was entirely done by SA
 ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/7d2d3f46cb6f187746d43e46e3c7843ffad723a79b0d0513.png)
 
 ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/bde9913c905de246cc179ef21dc14b7f5e575e1aa6cb1308.png)
+
 
 The results show that SAM outperforms the strong RITM baseline on 16 of the 23 datasets in terms of automatic evaluation using mIoU. With an oracle to resolve ambiguity, SAM outperforms RITM on all datasets.
 
