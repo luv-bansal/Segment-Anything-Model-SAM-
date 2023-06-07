@@ -9,7 +9,7 @@ Meta's new prompt-based AI model allows zero-shot generalization for any segment
 
 
 <p align='center'>
-<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/0eebc0a0-c243-4c79-897e-c929ee321e13" width="300" height="300"  >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/0eebc0a0-c243-4c79-897e-c929ee321e13" width="300" height="300"  >&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/53991037-a588-4e8b-b1ea-defb4a05cd1c" width="300" height="300" >
   <br>
   <em>Image Segmentation </em>
@@ -62,7 +62,7 @@ Since the text prompt for SAM has yet to be released by Meta, to read more about
 
 
 <p align='center' float="left">
-<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e3085f17-6589-450e-aa3c-f9ccdbc0af71" width="300" height="300">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e3085f17-6589-450e-aa3c-f9ccdbc0af71" width="300" height="300">&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e343d3dd-9de7-4dbb-adcd-b5c5b09e441d" width="300" height="300">
   <br />
   <em>Segmentation using single point & text prompt respectively </em>
@@ -140,6 +140,7 @@ Here is the [code implementation](https://colab.research.google.com/drive/1QmqOc
 
 <p align='center' float="left">
   <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/09bbc5be-5c62-46d7-a11a-755a8a6a83f7">
+  <br />
   <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/def7ba92-c936-47f7-82de-302bc8dbe200">
   <br />
   <em> Point to mask evaluation in 23 datasets</em>
