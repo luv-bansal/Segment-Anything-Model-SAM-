@@ -3,8 +3,10 @@
 Meta's new prompt-based AI model allows zero-shot generalization for any segmentation tasks without the need for additional training. 
 
 <!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/cf9c238ae7e0726e0cb383e844e2919f86d8f865e8dd8953.gif)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/501a97d189380e5a5ffbb3b7f9cd6d45c84ffffb8abe4c22.gif) -->
-<img src="Data\section-1.1a.gif" width="300" height="300" >
-<img src="Data\section-1.1b.gif" width="300" height="300" >
+<p align='center'>
+<img src="Data\section-1.1a.gif" width="400" height="400" >
+<img src="Data\section-1.1b.gif" width="400" height="400" >
+</p>
 
 ## 1\. Overview
 
@@ -27,15 +29,19 @@ Foundation models like SAM learn a general notion of what objects are,such that 
 
 On careful assessment, it is realized that SAM has a very effective zero-shot performance – at-par with or even superior to earlier completely supervised models \[1\].
 
-<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1caac742339adb912f7333c1a00b1c7247a9256c3799d983.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/4ba8ee2bc3b6c5c762cc0bc0c8634d7a2c54491fbafec1c3.gif) ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/2922e4c4b075ee3501d4647f36d09ecaca2bb08fd645d882.gif) -->
 
+<p align='center'>
 <img src="Data\section-1.4a.gif" width="32%" height="300" >
 <img src="Data\section-1.4b.gif" width="32%" height="300" >
 <img src="Data\section-1.4c.gif" width="32%" height="300" >
+</p>
 
 ### 2.2 SAM as a Promptable Image Segmentation Model
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/096dc483267de2803f328602a2f1a4063672c604defd92ed.webp)
+<p align='center' float="left">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/ce2a17ff-45ef-47ec-ac1a-e86a98ed0197"  >
+</p>
+
 
 SAM can take prompts from users about which area to segment out precisely. The following prompts can be provided to SAM as inputs: 
 
@@ -46,18 +52,21 @@ SAM can take prompts from users about which area to segment out precisely. The f
 
 Since the text prompt for SAM has not been released by meta, to read more about image segmentation with text prompt using SAM and Grounding Dino, you can refer to my article [here](https://onlinemarkdowneditor.dev/collaboration/#doce8829bf55f).
 
-<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/c326c38f4a03439b649f3f46bf27f83ee63fb10ea73604d8.jpeg)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/24ad53641c1497c6c47756495676943aa880e22d7da75929.gif) -->
 
-<img src="Data\section-1.2a.jpg" width="300" height="300" >
-<img src="Data\section-1.2b.gif" width="300" height="300" >
+<p align='center' float="left">
+<img src="Data\section-1.2a.jpg" width="400" height="400" >
+<img src="Data\section-1.2b.gif" width="400" height="400" >
+</p>
+
 
 ### 2.3 Model Architecture 
-
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/e0e3a755895b921c1e6d776934f138b2b91dfa8750a19d6a.gif)
-
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/3ea61c252344915c6730d735e5651c4ab2859e473ecf664c.png)
-
-Any image given as an input, first passes through an encoder which produces a one-time embedding for the input. 
+<p align='center'>
+<img src="Data\section-2.3a.gif" width="75%" height="500" >
+</p>
+<p align='center' float="left">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/402ebe03-4f7f-4985-a76e-1f837f034726">
+</p>
+Any image given as an input, first passes through an encoder which produces a one-time embedding for the input. 
 
 There is also a prompt encoder for **points**, **boxes**, or **text as prompts**. For points, the x & y coordinates, along with the foreground and background information, become input to the encoder. For boxes, the bounding box coordinates become the input to the encoder, and as for the text (not released at the time of writing this), the tokens become the input.
 
@@ -87,11 +96,9 @@ Meta developed a data engine to collect a dataset, **SA-1B** of 1.1 billion segm
 
 To enhance SAM's capabilities, researchers employed a model-in-the-loop data engine, using SAM to interactively annotate images and update the model. This iterative process of using SAM for annotation and training improved both the model and the dataset.
 
-<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/1a4e2948e35035bd5b41ed871a11f922760fa5ce9cf44a13.gif) -->
-
 
 <p align="center">
-  <img src="Data\section-4a.gif" width="300" height="300" >
+  <img src="Data\section-4a.gif" width="400" height="400" >
 </p>
 
 
@@ -101,35 +108,48 @@ The data engine has three stages:
 * Semi-Automatic Stage
 * Fully Automatic Stage
 
+### 5\. Code Implementation
 
-## 5\. Evaluation Metric and Quantitative Results of SAM
+Here is the [code implementation](https://colab.research.google.com/drive/1QmqOcXNT4h5SBbB1bsEjaFW4hqXwdXR2?usp=sharing) of Automated Mask Generation: Generate Segmentation with Bounding Box and Generate Segmentation with a text prompt.
+
+## 6\. Evaluation Metric and Quantitative Results of SAM
 
 * **Intersection-Over-Union:** IoU is the area of overlap between the predicted segmentation and the ground truth divided by the area of union between the predicted segmentation and the ground truth
 * **Average Mask Rating:** Metric for mask quality on image segmentation. mask quality on a scale of 1 (nonsense) to 10 (pixel-perfect).
 * **Efficiency.** The overall model design is largely motivated by efficiency. Given a precomputed image embedding, the prompt encoder and mask decoder runs in a web browser, on CPU, in ∼50ms. This runtime performance enables seamless, real-time interactive prompting of our model.
-
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/7d2d3f46cb6f187746d43e46e3c7843ffad723a79b0d0513.png)
-
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/bde9913c905de246cc179ef21dc14b7f5e575e1aa6cb1308.png)
+* 
+<p align='center' float="left">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/09bbc5be-5c62-46d7-a11a-755a8a6a83f7">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/def7ba92-c936-47f7-82de-302bc8dbe200">
+</p>
 
 
 The results show that SAM outperforms the strong RITM baseline on 16 of the 23 datasets in terms of automatic evaluation using mIoU. With an oracle to resolve ambiguity, SAM outperforms RITM on all datasets.
 
-## 6\. Applications
+## 7\. Applications
 
 * **Image editing:** SAM can be used to quickly and easily remove objects from images, such as people, cars, or buildings. This can be useful for privacy reasons, or to create more creative and interesting images. For example, a photographer could use SAM to remove a distracting person from the background of a portrait, or a graphic designer could use SAM to remove a logo from a product image.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/13ff19911d67ae3c70915d5e4060d4d774fbc376027aa2a9.png)
+<p align='center' float="left">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/c9842fa0-7cdb-4028-a396-5cee9b0ced56">
+</p>
+<!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/13ff19911d67ae3c70915d5e4060d4d774fbc376027aa2a9.png) -->
 
 * **Object detection:** SAM can be used to detect objects in images, even if they are partially obscured or have been rotated. This can be useful for applications such as self-driving cars and robotics. For example, a self-driving car could use SAM to detect pedestrians and other vehicles on the road, or a robotic arm could use SAM to identify objects in a warehouse.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/395c2c1f11f89c46ab49696552df7a1eff6acf6f3bf7259a.png)
+
+<p align='center' float="left">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e8184e6d-48e8-462f-bb0e-2a879c273b26">
+</p>
+
 
 * **Medical image analysis:** SAM can be used to segment organs and tissues in medical images, such as MRI scans and CT scans. This can be useful for diagnosis and treatment planning. For example, a doctor could use SAM to identify a tumor in a patient's brain, or a surgeon could use SAM to plan the best way to remove a tumor.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/54a0422986e15dc36fe8d86e545fc222e2a148b241ae5637.png)
+<p align='center' float="left">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/a988f2cd-d51a-4993-b4a8-eb1e00a92381">
+</p>
 
-## 7\. Limitations
+## 8\. Limitations
 
 • **Require strong prior knowledge.** During the usage of SAM, we observe that for complex scenes, e.g., crop segmentation and fundus image segmentation, more manual prompts with prior knowledge are required, which could potentially result in a suboptimal user experience. Additionally, we notice that SAM tends to favor selecting the foreground mask. When applying the SAM model to shadow detection task, even with a large number of click prompts, its performance remains poor. This may be due to the strong foreground bias in its pre-training dataset, which hinders its ability to handle certain scenarios effectively. 
 
