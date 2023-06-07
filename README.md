@@ -58,7 +58,7 @@ SAM can take prompts from users about which area to segment out precisely. The f
 * By drawing a rough mask on an object
 * By giving text prompts (not released)
 
-Since the text prompt for SAM has yet to be released by Meta, to read more about image segmentation with text prompts using SAM and Grounding Dino, you can refer to my article [here](https://onlinemarkdowneditor.dev/collaboration/#doce8829bf55f).
+Since the text prompt for SAM has yet to be released by Meta, to read more about image segmentation with text prompts using SAM and Grounding Dino, you can refer to my article [here](https://github.com/luv-bansal/Segment-Anything-Model-SAM-/blob/main/Files/textPrompt.md).
 
 
 <p align='center' float="left">
