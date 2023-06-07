@@ -145,7 +145,7 @@ The results show that SAM outperforms the strong RITM baseline on 16 of the 23 d
 * **Data Annotation:** Data annotation using the Segment Anything model offers versatile applications in the field of computer vision. This model enables precise annotation and segmentation of a wide range of objects, irrespective of their complexity or category. It can be applied in areas such as autonomous driving, where accurately annotating different road elements like lanes, traffic signs, and pedestrians is crucial for developing robust self-driving systems.
 
 <p align='center' float="left">
-  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e0d644a3-284f-4919-b018-c1ef06306fba">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e0d644a3-284f-4919-b018-c1ef06306fba" width="70%" height="375" >
 </p>
 
 
