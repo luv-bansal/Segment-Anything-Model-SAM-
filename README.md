@@ -60,8 +60,8 @@ Since the text prompt for SAM has yet to be released by Meta, to read more about
 
 
 <p align='center' float="left">
-<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e3085f17-6589-450e-aa3c-f9ccdbc0af71" width="300" height="400">
-<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e343d3dd-9de7-4dbb-adcd-b5c5b09e441d" width="300" height="400">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e3085f17-6589-450e-aa3c-f9ccdbc0af71" width="300" height="300">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e343d3dd-9de7-4dbb-adcd-b5c5b09e441d" width="300" height="300">
 </p>
 
 
