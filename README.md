@@ -3,9 +3,14 @@
 Meta's new prompt-based AI model allows zero-shot generalization for any segmentation tasks without the need for additional training. 
 
 <!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/cf9c238ae7e0726e0cb383e844e2919f86d8f865e8dd8953.gif)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/501a97d189380e5a5ffbb3b7f9cd6d45c84ffffb8abe4c22.gif) -->
+
+
+
+
+
 <p align='center'>
-<img src="Data\section-1.1a.gif" width="400" height="400" style="padding-right:30" >
-<img src="Data\section-1.1b.gif" width="400" height="400" >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/0eebc0a0-c243-4c79-897e-c929ee321e13" width="400" height="400" style="padding-right:30" >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/53991037-a588-4e8b-b1ea-defb4a05cd1c" width="400" height="400" >
 </p>
 
 ## 1\. Overview
@@ -27,13 +32,13 @@ SAM is a transformer-based deep learning model which seeks to resolve these prob
 
 Foundation models like SAM learn a general notion of what objects are,such that unfamiliar objects and images can be dealt with, without requiring additional training. This is called Zero-shot generalization.
 
-On careful assessment, it is realized that SAM has a very effective zero-shot performance – at-par with or even superior to earlier completely supervised models \[1\].
+On careful assessment, it is realized that SAM has a very effective zero-shot performance – at-par with or even superior to earlier completely supervised models .
 
 
 <p align='center'>
-<img src="Data\section-1.4a.gif" width="32%" height="300" >
-<img src="Data\section-1.4b.gif" width="32%" height="300" >
-<img src="Data\section-1.4c.gif" width="32%" height="300" >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/168e91a3-598b-4680-8894-08a0e15d75c5" width="32%" height="300">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e4a9fc41-0802-4b05-90ca-f446232d2451" width="32%" height="300">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/a306b2e4-78f2-447b-8f3f-0135d1d3f736" width="32%" height="300">
 </p>
 
 ### 2.2 SAM as a Promptable Image Segmentation Model
@@ -54,14 +59,16 @@ Since the text prompt for SAM has not been released by meta, to read more about 
 
 
 <p align='center' float="left">
-<img src="Data\section-1.2a.jpg" width="400" height="400" >
-<img src="Data\section-1.2b.gif" width="400" height="400" >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e3085f17-6589-450e-aa3c-f9ccdbc0af71" width="400" height="400">
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e343d3dd-9de7-4dbb-adcd-b5c5b09e441d" width="400" height="400">
 </p>
 
 
-### 2.3 Model Architecture 
+### 2.3 Model Architecture
+
 <p align='center'>
-<img src="Data\section-2.3.a.gif" width="75%" height="600" >
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/ad870e6d-79b8-4829-8bf6-08465183420b" width="75%" height="600">
+
 </p>
 <p align='center' float="left">
   <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/402ebe03-4f7f-4985-a76e-1f837f034726">
@@ -98,7 +105,7 @@ To enhance SAM's capabilities, researchers employed a model-in-the-loop data eng
 
 
 <p align="center">
-  <img src="Data\section-4a.gif" width="400" height="400" >
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/4e93e176-679b-47e5-9d94-216337d54768" width="400" height="400" >
 </p>
 
 
@@ -135,11 +142,10 @@ The results show that SAM outperforms the strong RITM baseline on 16 of the 23 d
 </p>
 <!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/13ff19911d67ae3c70915d5e4060d4d774fbc376027aa2a9.png) -->
 
-* **Object detection:** SAM can be used to detect objects in images, even if they are partially obscured or have been rotated. This can be useful for applications such as self-driving cars and robotics. For example, a self-driving car could use SAM to detect pedestrians and other vehicles on the road, or a robotic arm could use SAM to identify objects in a warehouse.
-
+* **Data Annotation:** Data annotation using the Segment Anything model offers versatile applications in the field of computer vision. This model enables precise annotation and segmentation of a wide range of objects, irrespective of their complexity or category. It can be applied in areas such as autonomous driving, where accurately annotating different road elements like lanes, traffic signs, and pedestrians is crucial for developing robust self-driving systems.
 
 <p align='center' float="left">
-  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e8184e6d-48e8-462f-bb0e-2a879c273b26">
+  <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/e0d644a3-284f-4919-b018-c1ef06306fba">
 </p>
 
 
