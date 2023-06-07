@@ -4,8 +4,8 @@ Meta's new prompt-based AI model allows zero-shot generalization for any segment
 
 <!-- ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/cf9c238ae7e0726e0cb383e844e2919f86d8f865e8dd8953.gif)  ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/animations/501a97d189380e5a5ffbb3b7f9cd6d45c84ffffb8abe4c22.gif) -->
 <p align='center'>
-<img src="Data\section-1.1a.gif" width="400" height="400" >
-<img src="Data\section-1.1b.gif" width="400" height="400" >
+<img src="Data\section-1.1a.gif" width="300" height="300" >
+<img src="Data\section-1.1b.gif" width="300" height="300" >
 </p>
 
 ## 1\. Overview
@@ -61,7 +61,7 @@ Since the text prompt for SAM has not been released by meta, to read more about 
 
 ### 2.3 Model Architecture 
 <p align='center'>
-<img src="Data\section-2.3a.gif" width="75%" height="500" >
+<img src="Data\section-2.3.a.gif" width="75%" height="400" >
 </p>
 <p align='center' float="left">
   <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/402ebe03-4f7f-4985-a76e-1f837f034726">
