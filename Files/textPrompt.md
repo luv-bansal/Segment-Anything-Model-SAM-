@@ -1,6 +1,7 @@
 # Image Segmentation with Text Prompt using Grounding Dino and SAM
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/1e6dece009c468d44bd0e3b414235a42acfcf123c69f219f.png)
+![image](https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/4607fd17-a6d8-47eb-a0c8-c3001e011ffb)
+
 
 ## Grounding Dino
 
@@ -16,10 +17,11 @@ The [Segment Anything Model](https://github.com/facebookresearch/segment-anythin
 
 To initiate the annotation process, begin by preparing the desired image. Subsequently, utilize the Grounding DINO model to generate bounding boxes around the objects depicted in the image. These initial bounding boxes will serve as the initial reference for the subsequent instance segmentation procedure.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/2cb87b64266632a35d7a627d99e0d08367a6544ee0f5f461.png)
+![image](https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/5e1a6ac6-234b-4d09-a21e-c42bd259088f)
 
 ## SAM to convert Bounding Boxes to Instance segmentation
 
 Once the bounding boxes have been established, the SAM model can be employed to convert them into instance segmentation masks. The SAM model utilizes the input of bounding box data and produces accurate segmentation masks for individual objects within the image.
 
-![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/7f2f70f97828f789dfd9393ceb0e967d1186b9d5d045e662.png)
+![image](https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/c01061d8-c15e-47c2-8716-59983044bff3)
+
