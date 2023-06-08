@@ -93,7 +93,7 @@ Any vector that the model gets from the prompt vector + image embedding passes t
 
 We get possible valid masks along with a confidence score as the output.
 
-* **SAM Image Encoder:** The image encoder is one of the most powerful and essential components of SAM. It is built upon an **MAE pre-trained** [**Vision Transformer**](https://learnopencv.com/the-future-of-image-recognition-is-here-pytorch-vision-transformer/) model. The image encoder runs once per image and can be applied prior to prompting the model.
+* **SAM Image Encoder:** The image encoder is one of the most powerful and essential components of SAM. It is built upon an **MAE pre-trained** **Vision Transformer** model. The image encoder runs once per image and can be applied prior to prompting the model.
 * **Prompt Encoder:** For the prompt encoder, points, boxes, and text act as sparse inputs, and masks act as dense inputs. The creators of SAM represent points and bounding boxes using positional encodings and sum it with learned embeddings. For text prompts, SAM uses the text encoder from CLIP. For masks as prompts, after downsampling happens through convolutional layers, the embedding is summed element-wise with the input image embedding.
 * **Mask Decoder:** The mask decoder efficiently maps the image embedding, prompt embeddings, and an output token to a mask.
 
