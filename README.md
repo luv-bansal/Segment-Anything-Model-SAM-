@@ -85,7 +85,7 @@ There is also a prompt encoder for **points, boxes**, or **text as prompts**. Fo
 
 Any vector that the model gets from the prompt vector + image embedding passes through a lightweight decoder that creates the final segmentation mask. We get possible valid masks along with a confidence score as the output.
 
-#### 2.3.1 Components
+#### 2.3.2 Components
 
 <p align='center'>
 <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/ad870e6d-79b8-4829-8bf6-08465183420b" width="75%" height="600">
