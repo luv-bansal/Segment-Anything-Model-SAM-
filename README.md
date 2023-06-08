@@ -179,17 +179,19 @@ The results show that SAM outperforms the strong RITM baseline on 16 of the 23 d
 
 ## 8\. Limitations
 
-• **Require strong prior knowledge.** During the usage of SAM, we observe that for complex scenes, e.g., crop segmentation and fundus image segmentation, more manual prompts with prior knowledge are required, which could potentially result in a suboptimal user experience. Additionally, we notice that SAM tends to favor selecting the foreground mask. When applying the SAM model to shadow detection tasks, even with a large number of click prompts, its performance remains poor. This may be due to the strong foreground bias in its pre-training dataset, which hinders its ability to handle certain scenarios effectively. 
+- **Prior knowledge requirement**: SAM often requires additional manual prompts with prior knowledge, especially for complex scenes like crop segmentation and fundus image segmentation. This can potentially result in a suboptimal user experience. Additionally, SAM's preference for foreground masks can limit its performance in shadow detection tasks, even with numerous click prompts.
 
-• **Less effective in low-contrast applications.** Segmenting objects with similar surrounding elements is considered a challenging scenario, especially when dealing with transparent or camouflaged objects that are “seamlessly” embedded in their surroundings. Experiments reveal that there is considerable room for exploring and enhancing SAM’s robustness in complex scenes with low-contrast elements. 
+- **Low-contrast applications**: SAM's effectiveness is reduced when segmenting objects with similar surroundings, particularly transparent or camouflaged objects seamlessly blending into their environment. Enhancements are needed to improve SAM's robustness in handling complex scenes with low-contrast elements.
 
-• **Limited understanding of professional data**. We apply SAM to real-world medical and industrial scenarios and discover that it produces unsatisfactory results for professional data, particularly when using box mode and everything mode. This reveals SAM’s limitations in understanding these practical scenarios. Moreover, even with click mode, both the user and the model are required to possess certain domain-specific knowledge and understanding of the task at hand. 
+- **Limited understanding of professional data**: SAM's performance with professional data, especially in box mode and everything mode, is often unsatisfactory. This highlights SAM's limitations in comprehending practical scenarios. Even with click mode, both the user and the model require domain-specific knowledge and understanding of the task.
 
-• **Smaller and irregular objects can pose challenges for SAM.** Remote sensing and agriculture present additional challenges, such as irregular buildings and small-sized streets captured from aerial imaging sensors. These complexities make it challenging for SAM to produce complete segmentation. Designing effective strategies for SAM in such cases is still an open issue.
+- **Challenges with smaller and irregular objects**: SAM faces difficulties in segmenting smaller and irregular objects, commonly found in remote sensing and agriculture applications. This includes irregular buildings and small-sized streets captured by aerial imaging sensors. Developing effective strategies for SAM in such cases remains an open issue.
 
-## References
+## 9\. References
 
 1. [https://arxiv.org/pdf/2304.02643.pdf](https://arxiv.org/pdf/2304.02643.pdf)
 2. [https://segment-anything.com/](https://segment-anything.com/)
 3. [https://learnopencv.com/segment-anything/](https://learnopencv.com/segment-anything/)
-4. [https://blog.roboflow.com/grounding-dino-zero-shot-object-detection/](https://blog.roboflow.com/grounding-dino-zero-shot-object-detection/)
+4. [https://github.com/facebookresearch/segment-anything](https://github.com/facebookresearch/segment-anything)
+
+5. [https://blog.roboflow.com/grounding-dino-zero-shot-object-detection/](https://blog.roboflow.com/grounding-dino-zero-shot-object-detection/)
