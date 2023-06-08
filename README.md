@@ -71,11 +71,7 @@ Since the text prompt for SAM has yet to be released by Meta, to read more about
 
 ### 2.3 Model Architecture
 
-<p align='center'>
-<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/ad870e6d-79b8-4829-8bf6-08465183420b" width="75%" height="600">
-<br />
-<em>The Segment Anything Model can run in real-time in browser</em>
-</p>
+#### 2.3.1 Overview
 
 <p align='center' float="left">
   <img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/402ebe03-4f7f-4985-a76e-1f837f034726">
@@ -85,13 +81,17 @@ Since the text prompt for SAM has yet to be released by Meta, to read more about
 
 Any image given as an input first passes through an encoder which produces a one-time embedding for the input.
 
-There is also a prompt encoder for **points, boxes**, or **text as prompts**. For points, the x & y coordinates, along with the foreground and background information, become input to the encoder. For boxes, the bounding box coordinates become the input to the encoder, and as for the text (not released at the time of writing this), the tokens become the input.
+There is also a prompt encoder for **points, boxes**, or **text as prompts**. For points, the x & y coordinates, along with the foreground and background information, become input to the encoder. For boxes, the bounding box coordinates become the input to the encoder, and as for the text (not released at the time of writing this), the tokens become the input. In case we provide a mask as input, it directly goes through a downsampling stage. The downsampling happens using 2D convolutional layers. Then the model concatenates it with the image embedding to get the final vector. 
 
-In case we provide a mask as input, it directly goes through a downsampling stage. The downsampling happens using 2D convolutional layers. Then the model concatenates it with the image embedding to get the final vector. 
+Any vector that the model gets from the prompt vector + image embedding passes through a lightweight decoder that creates the final segmentation mask. We get possible valid masks along with a confidence score as the output.
 
-Any vector that the model gets from the prompt vector + image embedding passes through a lightweight decoder that creates the final segmentation mask. 
+#### 2.3.1 Components
 
-We get possible valid masks along with a confidence score as the output.
+<p align='center'>
+<img src="https://github.com/luv-bansal/Segment-Anything-Model-SAM-/assets/70321430/ad870e6d-79b8-4829-8bf6-08465183420b" width="75%" height="600">
+<br />
+<em>The Segment Anything Model can run in real-time in browser</em>
+</p>
 
 * **SAM Image Encoder:** The image encoder is one of the most powerful and essential components of SAM. It is built upon an **MAE pre-trained** **Vision Transformer** model. The image encoder runs once per image and can be applied prior to prompting the model.
 * **Prompt Encoder:** For the prompt encoder, points, boxes, and text act as sparse inputs, and masks act as dense inputs. The creators of SAM represent points and bounding boxes using positional encodings and sum it with learned embeddings. For text prompts, SAM uses the text encoder from CLIP. For masks as prompts, after downsampling happens through convolutional layers, the embedding is summed element-wise with the input image embedding.
